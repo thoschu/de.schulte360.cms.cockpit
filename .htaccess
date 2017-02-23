@@ -1,0 +1,14 @@
+AuthUserFile /var/www/vhosts/web32.dehamd006.servertools24.de/cockpit.schulte360.de/.htpasswd
+AuthType Basic
+AuthName "superadmin"
+
+<Files "info.php">
+  Require valid-user
+</Files>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+</IfModule>

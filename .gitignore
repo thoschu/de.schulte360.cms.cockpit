@@ -46,3 +46,10 @@
 
 # Backup entities generated with doctrine:generate:entities command
 */Entity/*~
+
+.idea
+
+cockpit/*
+!cockpit/README.md
+!cockpit/check.php
+!cockpit/custom
